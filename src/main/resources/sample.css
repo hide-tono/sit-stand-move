@@ -1,0 +1,9 @@
+Label#status {
+    -fx-font-size: 10pt;
+    -fx-alignment: center;
+}
+
+Label#time {
+    -fx-font-size: 18pt;
+    -fx-alignment: center;
+}

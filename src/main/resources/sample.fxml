@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--importはJavaやKotlinと同様に書く-->
+<!--パネル-->
+<!--fx:controllerでコントローラを指定-->
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <!--スタイルシート-->
+    <stylesheets>
+        <URL value="@sample.css" />
+    </stylesheets>
+
+    <!--部品-->
+    <!--fx:idでコントローラやスタイルファイルで使うIDを指定-->
+    <top>
+        <Label fx:id="status" text="Sit."/>
+    </top>
+    <center>
+        <Label fx:id="time" text="20:00" />
+    </center>
+    <bottom>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="move" onAction="#moveOnAction" text="Move" GridPane.columnIndex="3"  />
+                <Button fx:id="stand" onAction="#standOnAction" text="Stand" GridPane.columnIndex="2"  />
+                <Button fx:id="sit" onAction="#sitOnAction" text="Sit" GridPane.columnIndex="1" />
+                <Button fx:id="start" onAction="#startOnAction" text="Start" GridPane.columnIndex="0" />
+            </children>
+        </GridPane>
+    </bottom>
+</BorderPane>
