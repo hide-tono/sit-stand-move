@@ -31,7 +31,7 @@ class Controller {
             window.x = 0.0
             window.y = 0.0
             window.width = 2160.0
-            window.height = 1920.0
+            window.height = 1880.0
             if (status.text == "sit.") {
                 changeToStand()
             } else if (status.text == "stand.") {
