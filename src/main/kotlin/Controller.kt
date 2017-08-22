@@ -27,6 +27,11 @@ class Controller {
         val min = time.text.substring(0, 2).toInt()
         val sec =  time.text.substring(3, 5).toInt()
         if (min == 0 && sec == 0) {
+            val window = start.scene.window
+            window.x = 0.0
+            window.y = 0.0
+            window.width = 2160.0
+            window.height = 1920.0
             if (status.text == "sit.") {
                 changeToStand()
             } else if (status.text == "stand.") {
@@ -34,6 +39,7 @@ class Controller {
             } else {
                 changeToSit()
             }
+            startOnAction()
         } else if (sec == 0) {
             time.text = String.format("%02d:59", (min - 1))
         } else {
@@ -47,6 +53,11 @@ class Controller {
             timer.cycleCount = Timeline.INDEFINITE
             timer.play()
             start.text = "stop"
+            val window = start.scene.window
+            window.height = 130.0
+            window.width = 210.0
+            window.x = 950.0
+            window.y = 1750.0
         } else {
             timer.stop()
             start.text = "start"
