@@ -16,7 +16,7 @@
     <!--部品-->
     <!--fx:idでコントローラやスタイルファイルで使うIDを指定-->
     <top>
-        <Label fx:id="status" text="Sit."/>
+        <Label fx:id="status" text="sit."/>
     </top>
     <center>
         <Label fx:id="time" text="20:00"/>

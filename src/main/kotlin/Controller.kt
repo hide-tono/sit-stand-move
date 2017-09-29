@@ -56,8 +56,8 @@ class Controller {
             val window = start.scene.window
             window.height = 130.0
             window.width = 210.0
-            window.x = 950.0
-            window.y = 1750.0
+            window.x = 1700.0
+            window.y = 900.0
         } else {
             timer.stop()
             start.text = "start"
