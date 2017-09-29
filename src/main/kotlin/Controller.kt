@@ -30,8 +30,8 @@ class Controller {
             val window = start.scene.window
             window.x = 0.0
             window.y = 0.0
-            window.width = 2160.0
-            window.height = 1880.0
+            window.width = 1920.0
+            window.height = 1040.0
             if (status.text == "sit.") {
                 changeToStand()
             } else if (status.text == "stand.") {
